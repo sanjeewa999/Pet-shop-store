@@ -39,10 +39,11 @@ nav ul li{
     display: inline-block;
     margin-left: 60px;
 }
-nav ul li{
+nav ul li a{
     text-decoration: none;
-    color: rgb(50, 198, 239);
-    font-size: 18px;
+    color: aliceblue;
+    text-shadow: 0 0 5px rgb(59, 234, 240);
+    font-size: 20px;
     font-weight: bolder;
     cursor: pointer;
 }
@@ -91,8 +92,8 @@ button a{
     text-decoration: none;
 }
 .card{
-    width: 200px;
-    height: 230px;
+    width: 230px;
+    height: 250px;
     display: inline-block;
     border-radius: 10px;
     padding: 15px 25px;
@@ -119,8 +120,9 @@ button a{
     transform: translateY(-10px);
 }
 h5{
-    color: aliceblue;
-    text-shadow: 0 0 5px rgb(59, 234, 240);
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgb(5, 26, 255);
+    font-size: 15px;
 }
 .card p{
     text-shadow: 0 0 5px rgb(255, 251, 9);

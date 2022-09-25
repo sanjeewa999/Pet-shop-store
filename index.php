@@ -13,9 +13,9 @@
                 <!-- <img src="imgs/logo.png" class="logo"> -->
                 <nav>
                     <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Log in</li>
+                        <li><a href="home.php">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Log in</a></li>
                     </ul>
                 </nav>
                 <img src="imgs/main/menu.png" class="menu-icon">
