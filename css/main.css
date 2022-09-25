@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    /*background-image: linear-gradient(rgba(0,0,0,0,7),rgba(0,0,0,0,7)),url(../imgs/main/pic1.jpg);*/
+    background-image: url(../imgs/main/background.png);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 1%;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+/*.logo{
+    width: 200px;
+    cursor: pointer;
+}*/
+.menu-icon{
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+nav ul li{
+    text-decoration: none;
+    color: rgb(50, 198, 239);
+    font-size: 18px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+/*nav ul li:hover{
+    background: rgb(249, 205, 189);
+}*/
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+.col{
+    flex-basis: 50%;
+}
+h1{
+    color:rgb(51, 2, 36);
+    font-size: 110px;
+}
+p{
+    color: rgb(4, 43, 22);
+    font-size: 14px;
+    line-height: 15px;
+}
+button{
+    width: 180px;
+    color: rgb(15, 15, 17);
+    font-size: 16px;
+    padding: 12px 0;
+    background: rgb(248, 212, 33);
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+}
+button a{
+    text-decoration: none;
+}
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 15px 35px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+.card1{
+    background-image: url(../imgs/main/pic1.jpg);
+}
+.card2{
+    background-image: url(../imgs/main/pic2.jpg);
+}
+.card3{
+    background-image: url(../imgs/main/pic3.jpeg);
+}
+.card4{
+    background-image: url(../imgs/main/pic4.jpeg);
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+h5{
+    color: aliceblue;
+    text-shadow: 0 0 5px rgb(59, 234, 240);
+}
+.card p{
+    text-shadow: 0 0 5px rgb(255, 251, 9);
+}
