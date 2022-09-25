@@ -29,19 +29,19 @@
                 <div class="col">
                     <div class="card card1">
                         <h5>Dogs</h5>
-                        <p>Dogs do speak, but only to those who know how to listen.</p>
+                        <!--<p>Dogs do speak, but only to those who know how to listen.</p> -->
                     </div>
                     <div class="card card2">
                         <h5>Cats & Dogs</h5>
-                        <p>Cats are smarter than dogs. You can't get eight cats to pull a sled through snow.</p> 
+                        <!-- <p>Cats are smarter than dogs. You can't get eight cats to pull a sled through snow.</p> -->
                     </div>
                     <div class="card card3">
                         <h5>Dogs & Cats</h5>
-                        <p>Dogs come when they're called; cats take a message and get back to you later.</p>
+                        <!-- <p>Dogs come when they're called; cats take a message and get back to you later.</p> -->
                     </div>
                     <div class="card card4">
                         <h5>Cats</h5>
-                        <p>Cats are inquisitive, but hate to admit it.</p>
+                        <!--<p>Cats are inquisitive, but hate to admit it.</p> -->
                     </div>
                 </div>
             </div>

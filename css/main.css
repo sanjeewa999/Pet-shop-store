@@ -58,8 +58,18 @@ nav ul li{
     flex-basis: 50%;
 }
 h1{
-    color:rgb(51, 2, 36);
     font-size: 110px;
+    color:transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(../imgs/main/bg.jpg);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
 }
 p{
     color: rgb(4, 43, 22);
