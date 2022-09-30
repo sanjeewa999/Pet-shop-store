@@ -4,7 +4,7 @@
 <html>
     <head>
         <title>Drop down</title>
-        <link rel="stylesheet" href="navstyle.css">
+        <link rel="stylesheet" href="../css/navstyle.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     </head>
     

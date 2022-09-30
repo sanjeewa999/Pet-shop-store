@@ -5,8 +5,9 @@
 <html>
     <head>
         <title>Pet Shop</title>
-        <link rel="stylesheet" href="css/footer.css">
-        <link rel="stylesheet" href="css/navstyle.css">
+        <link rel="stylesheet" href="../css/footer.css">
+        <link rel="stylesheet" href="../css/navstyle.css">
+        <link rel="stylesheet" href="../css/slider.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
         <script src="https://kit.fontawesome.com/619bc20a51.js" crossorigin="anonymous"></script>
     </head>
@@ -104,10 +105,42 @@
                 </ul>
             </div>
         </nav>
+        <br><br><br> <br><br><br> <br><br><br>
+        <!-- slider begin -->
+        <slider>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="../imgs/home/slider1.jpg" style="width: 100%; height: 80%;">
+                <div class="text">SHOP FOR ALL YOUR PETS NEEDS, UNDER ONE ROOF</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="../imgs/home/slider2.jpg" style="width: 100%; height: 80%;">
+                <div class="text">Everything you need for your furry or flying or finned friends</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="../imgs/home/slider3.jpg" style="width: 100%; height: 80%;">
+                <div class="text">For all pet food and pet accessories</div>
+            </div>
 
+            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+            <a class="next" onclick="plusSlides(1)">&#10095</a>
+
+        </div>
+        <br>
+        <div style="text-align: center;">
+            <span class="dot" onclick="currentSlides(1)"></span>
+            <span class="dot" onclick="currentSlides(2"></span>
+            <span class="dot" onclick="currentSlides(3)"></span>
+        </div>
+
+        <script src="../js/slider.js"></script>
+
+    </slider>
          <!-- footer begin-->
 
-         <h1> Slider </h1>
 
          <h1> pics 4 </h1>
 
@@ -164,6 +197,8 @@
          <hr>
          <p class="copyright">© Pet Care.lk - All rights reserved</p>
       </footer>
+
+      
       <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
       <script>
          const swiper = new Swiper('.swiper', {
@@ -187,5 +222,6 @@
           
          }); 
       </script>
+       
     </body>
 </html>
