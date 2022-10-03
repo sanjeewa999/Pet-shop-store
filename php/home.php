@@ -8,17 +8,27 @@
         <link rel="stylesheet" href="../css/footer.css">
         <link rel="stylesheet" href="../css/navstyle.css">
         <link rel="stylesheet" href="../css/slider.css">
+        <link rel="stylesheet" href="../css/searchbar.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
         <script src="https://kit.fontawesome.com/619bc20a51.js" crossorigin="anonymous"></script>
     </head>
     <body>
 
-    <h1> search bar & cart </h1>
-
-    <h1> logo </h1>
+        <sb>
+            <div class="topnav">
+                <label class="topic" style="font-family:arial; font-size:20px; padding-top:20px; margin: top 20px;"> An Exclusive Pet Shopping Experience </label>
+                <a  href="#home">Login or Create Account</a>
+                <a href="#about"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+                <input type="text" class="search-box"  placeholder="Search..">
+            </div>
+        </sb>
+            <!-- <div class="logo">
+                <img src="../imgs/logo.png" alt="petlogo" width="200px" height="150px">
+            </div> -->
+        
 
          <!-- navigation bar begin-->
-
+         <br>
          <nav>
             <div class="menu-bar">
                 <ul>
