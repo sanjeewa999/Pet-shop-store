@@ -1,6 +1,6 @@
 <?php
     include('connection.php');
-    include('myfunctions.php');
+    include('myfunction.php');
 ?>
 
 <html>
@@ -20,7 +20,7 @@
                 <i class="fa fa-bars" id="sidebar_btn"></i>
             </label>
             <div class="left_area">
-                <h3>Haay <span>Shooping</span></h3>
+                <h3>PET <span>CARE</span></h3>
             </div>
             <div class="right_area">
                 <a href="admin.php" class="logout_btn">Sign out</a>
@@ -31,7 +31,7 @@
         <!--sliderbar start-->
         <div class="sidebar">
             <center>
-                <img src="images/dashadmin.jpg" class="profile_image" alt="profile image">
+                <img src="imgs/dashadmin.jpg" class="profile_image" alt="profile image">
                 <h4>Admin</h4>
             </center>
             <a href="admindashboard.php"><i class="fa fa-home"></i><span>Dashboard</span></a>
@@ -72,7 +72,7 @@
                                             <tr>
                                                 <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['category_id']; ?></td>
                                                 <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['category_name']; ?></td>
-                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['c_description']; ?></td>
+                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['c_desc']; ?></td>
 
                                                 <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">
                                                 <!-- <a href="#" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:15px 32px; border-radius:15px;">Delete</a> -->

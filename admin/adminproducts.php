@@ -1,6 +1,6 @@
 <?php
     include('connection.php');
-    include('myfunctions.php');
+    include('myfunction.php');
 ?>
 
 <html>
@@ -20,7 +20,7 @@
                 <i class="fa fa-bars" id="sidebar_btn"></i>
             </label>
             <div class="left_area">
-                <h3>Haay <span>Shooping</span></h3>
+                <h3>PET <span>CARE</span></h3>
             </div>
             <div class="right_area">
                 <a href="admin.php" class="logout_btn">Sign out</a>
@@ -31,7 +31,7 @@
         <!--sliderbar start-->
         <div class="sidebar">
             <center>
-                <img src="images/dashadmin.jpg" class="profile_image" alt="profile image">
+                <img src="imgs/dashadmin.jpg" class="profile_image" alt="profile image">
                 <h4>Admin</h4>
             </center>
             <a href="admindashboard.php"><i class="fa fa-home"></i><span>Dashboard</span></a>
@@ -56,7 +56,6 @@
                                 <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Product ID</th>
                                 <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Category ID</th>
                                 <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Product Name</th>
-                                <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Brand</th>
                                 <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Selling Price</th>
                                 <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Quantity</th>
                                 <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Image</th>
@@ -76,11 +75,10 @@
                                             <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['product_id']; ?></td>
                                             <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['category_id']; ?></td>
                                             <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['product_name']; ?></td>
-                                            <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['p_brand']; ?></td>
                                             <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['selling_price']; ?></td>
-                                            <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['p_qty']; ?></td>
+                                            <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['pro_qty']; ?></td>
                                             <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">
-                                                <img src="uploads/<?= $item['p_image']; ?>" width="80px" height="80px" alt="<?= $item['product_name']; ?>">
+                                                <img src="uploads/<?= $item['pro_img']; ?>" width="80px" height="80px" alt="<?= $item['product_name']; ?>">
                                             </td>
 
                                             <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">
@@ -120,7 +118,7 @@
                     $delete_query_run = mysqli_query($con, $delete_query);
 
                     $product_data = mysqli_fetch_array($product_query_run);
-                    $image = $product_data['p_image'];
+                    $image = $product_data['pro_img'];
 
                     if($delete_query_run)
                     {
