@@ -1,5 +1,5 @@
 <?php
-
+    include ("connection.php");
 ?>
 
 <html>
@@ -10,6 +10,13 @@
         <link rel="stylesheet" href="../css/slider.css">
         <link rel="stylesheet" href="../css/searchbar.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="../css/fp.css">
+        <!-- <link rel="stylesheet" href="../css/ab.css"> -->
+        <link rel="styleshhet" href="../bootstrap-5.2.2-dist/css/bootstrap.min.css">
+        <script src="text/javascript" src="../bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/fp1.js"></script>
+        <script type="text/javascript" src="../js/ab.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/619bc20a51.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -149,19 +156,54 @@
         <script src="../js/slider.js"></script>
 
     </slider>
-         <!-- footer begin-->
-
-
+         
          <h1> pics 4 </h1>
 
-         <h1> featured products </h1>
+        <!-- fp begin -->
+        
+        <fp>
+        <div class="container-fluid">
+            <div class="row">
+            <?php $sql="SELECT * FROM product";
+               $result=mysqli_query($con,$sql);
+               
 
-         <h1> available brands </h1>
+               while($row=mysqli_fetch_array($result)){
+  
+               ?>
+               
 
+         <div class='col-lg-3 col-md-4 mb-3 ml-5 mr-5 mt-5'>
+          <div class='card h-100'> 
+          <a href='#'><img class='card-img-top' src="../imgs/home/<?php echo $row['pro_img'] ?>"></a>
+         <div class='card-body'>
+            <h4 class='card-title'>
+                   <a href='#'></a>
+               <h4><?php echo $row['product_name'] ?></h4> 
+                 <h5>Rs.<?php echo $row['selling_price'] ?></h5> 
+                 <p class='card-text'><?php echo $row['product_name'] ?></p>
+                </div> 
+                <div class='card-footer'>
+                 <small class='text-muted'>&#9733; &#9733; &#9733; &#9733; &#9734;</small> 
+              </div>
+              </div>
+            </div>
+            <?php
+                }
+            ?>
+            </div>
+        </div>
+        </fp>
+
+        <!-- ab begin -->
+
+
+
+        <!-- footer begin-->
         <footer>
          <div class = "row">
             <div class="col">
-               <img src="imgs/logo.png" class="logo">
+               <img src="../imgs/logo.png" class="logo">
                <h4>Pet Care.lk - Pet Shop Sri & Aquarium Lanka</h4>
                <p>Pet Care.lk is your One-stop shop for all things Pet related, selling a range of Top quality, correctly formulated Industry-trusted Pet supplies brands. We only work with official product agents in Sri Lanka and offer online payment and Islandwide delivery</p>
             </div>

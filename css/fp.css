@@ -100,3 +100,7 @@ a{
         opacity: 1;
     }
 }
+
+.items{
+    display: inline-block;
+}
