@@ -20,7 +20,7 @@
         <script src="https://kit.fontawesome.com/619bc20a51.js" crossorigin="anonymous"></script>
     </head>
     <body>
-
+    
         <sb>
             <div class="topnav">
                 <label class="topic" style="font-family:arial; font-size:20px; padding-top:20px; margin: top 20px;"> An Exclusive Pet Shopping Experience </label>
@@ -29,58 +29,19 @@
                 <input type="text" class="search-box"  placeholder="Search..">
             </div>
         </sb>
-            <!-- <div class="logo">
-                <img src="../imgs/logo.png" alt="petlogo" width="200px" height="150px">
-            </div> -->
-        
-
-         <!-- navigation bar begin-->
+        <!-- navigation bar begin -->
          <br>
          <?php include "navbar.php"?>
-         
-        <br><br><br> <br><br><br> <br><br><br>
+        <br><br><br> <br>
         <!-- slider begin -->
-        <slider>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="../imgs/home/slider1.jpg" style="width: 100%; height: 80%;">
-                <div class="text">SHOP FOR ALL YOUR PETS NEEDS, UNDER ONE ROOF</div>
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="../imgs/home/slider2.jpg" style="width: 100%; height: 80%;">
-                <div class="text">Everything you need for your furry or flying or finned friends</div>
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="../imgs/home/slider3.jpg" style="width: 100%; height: 80%;">
-                <div class="text">For all pet food and pet accessories</div>
-            </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094</a>
-            <a class="next" onclick="plusSlides(1)">&#10095</a>
-
-        </div>
-        <br>
-        <div style="text-align: center;">
-            <span class="dot" onclick="currentSlides(1)"></span>
-            <span class="dot" onclick="currentSlides(2"></span>
-            <span class="dot" onclick="currentSlides(3)"></span>
-        </div>
-
-        <script src="../js/slider.js"></script>
-
-    </slider>
-         
-         <h1> pics 4 </h1>
+         <h1> Coat Suppliments </h1>
 
         <!-- fp begin -->
         
         <fp>
         <div class="container-fluid">
             <div class="row">
-            <?php $sql="SELECT * FROM product";
+            <?php $sql="SELECT * FROM product , category WHERE category.category_id = product.category_id AND category.category_name = 'coat supplements'";
                $result=mysqli_query($con,$sql);
                
 

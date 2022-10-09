@@ -1,6 +1,6 @@
 <?php
     include('connection.php');
-    include('myfunctions.php');
+    include('myfunction.php');
 ?>
 
 <html>
@@ -20,7 +20,7 @@
                 <i class="fa fa-bars" id="sidebar_btn"></i>
             </label>
             <div class="left_area">
-                <h3>Haay <span>Shooping</span></h3>
+                <h3>PET <span>CARE</span></h3>
             </div>
             <div class="right_area">
                 <a href="admin.php" class="logout_btn">Sign out</a>
@@ -31,7 +31,7 @@
         <!--sliderbar start-->
         <div class="sidebar">
             <center>
-                <img src="images/dashadmin.jpg" class="profile_image" alt="profile image">
+                <img src="imgs/dashadmin.jpg" class="profile_image" alt="profile image">
                 <h4>Admin</h4>
             </center>
             <a href="admindashboard.php"><i class="fa fa-home"></i><span>Dashboard</span></a>
