@@ -80,7 +80,7 @@
         <fp>
         <div class="container-fluid">
             <div class="row">
-            <?php $sql="SELECT * FROM product";
+            <?php $sql="SELECT * FROM product LIMIT 10" ;
                $result=mysqli_query($con,$sql);
                
 
@@ -89,7 +89,7 @@
                ?>
                
 
-         <div class='col-lg-3 col-md-4 mb-3 ml-5 mr-5 mt-5'>
+        <div class='col-lg-3 col-md-4 mb-3 ml-5 mr-5 mt-5'>
           <div class='card h-100'> 
           <a href='#'><img class='card-img-top' src="../admin/uploads/<?php echo $row['pro_img'] ?>"></a>
          <div class='card-body'>
@@ -113,7 +113,9 @@
 
         <!-- ab begin -->
 
-
+        <?php
+           //include('ab.php');
+        ?>
 
         <!-- footer begin-->
         <footer>

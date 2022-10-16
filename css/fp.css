@@ -104,3 +104,8 @@ a{
 .items{
     display: inline-block;
 }
+
+.card-img-top{
+    width: 50px;
+    height: 80px;
+}
