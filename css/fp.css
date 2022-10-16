@@ -105,7 +105,7 @@ a{
     display: inline-block;
 }
 
-.card-img-top{
+.card-img-top img{
     width: 50px;
     height: 80px;
 }

@@ -21,7 +21,7 @@
                 <h3>PET <span>CARE</span></h3>
             </div>
             <div class="right_area">
-                <a href="admin.php" class="logout_btn">Sign out</a>
+                <a href="adminlogin.php" class="logout_btn">Sign out</a>
             </div>
         </header>
         <!--header area end-->
