@@ -121,7 +121,7 @@
         <footer>
          <div class = "row">
             <div class="col">
-               <img src="../imgs/logo.png" class="logo">
+               <!-- <img src="../imgs/logo.png" class="logo"> -->
                <h4>Pet Care.lk - Pet Shop Sri & Aquarium Lanka</h4>
                <p>Pet Care.lk is your One-stop shop for all things Pet related, selling a range of Top quality, correctly formulated Industry-trusted Pet supplies brands. We only work with official product agents in Sri Lanka and offer online payment and Islandwide delivery</p>
             </div>

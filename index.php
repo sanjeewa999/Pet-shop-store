@@ -15,8 +15,9 @@
                 <nav>
                     <ul>
                         <li><a href="php/home.php">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Log in</a></li>
+                        <li><a href="php/aboutus.php">About Us</a></li>
+                        <li><a href="php/services.php">Our Services</a></li>
+                        <li><a href="admin/adminlogin.php">Log in</a></li>
                     </ul>
                 </nav>
                 <img src="imgs/main/menu.png" class="menu-icon">
