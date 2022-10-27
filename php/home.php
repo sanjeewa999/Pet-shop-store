@@ -1,5 +1,6 @@
 <?php
-    include ("connection.php");
+    include('connection.php');
+    //session_start();
 ?>
 
 <html>
@@ -25,7 +26,7 @@
             <div class="topnav">
                 <label class="topic" style="font-family:arial; font-size:20px; padding-top:20px; margin: top 20px;"> An Exclusive Pet Shopping Experience </label>
                 <a  href="#home">Login or Create Account</a>
-                <a href="#about"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+                <a href="cart.php"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
                 <input type="text" class="search-box"  placeholder="Search..">
             </div>
         </sb>
@@ -178,23 +179,31 @@
           <a href='#'><img class='card-img-top' src="../imgs/home/<?php echo $row['pro_img'] ?>"></a>
          <div class='card-body'>
             <h4 class='card-title'>
-                   <a href='#'></a>
-               <h4><?php echo $row['product_name'] ?></h4> 
-                 <h5>Rs.<?php echo $row['selling_price'] ?></h5> 
-                 <p class='card-text'><?php echo $row['product_name'] ?></p>
-                </div> 
-                <div class='card-footer'>
-                 <small class='text-muted'>&#9733; &#9733; &#9733; &#9733; &#9734;</small> 
-              </div>
-              </div>
-            </div>
-            <?php
-                }
-            ?>
-            </div>
+
+        <a href="productdetails.php?id=<?php echo $row['product_id'];?>">
+                    <!-- <img src="<?php echo "../Admin/uploads/".$row['p_image']?>" width="300">  -->
+                    <h4><?php echo $row['product_name'];?><br>
+                    <?php echo $row['selling_price'];?>
+
+
+                    
+                <h4><?php echo $row['product_name'] ?></h4> 
+                    <h5>Rs.<?php echo $row['selling_price'] ?></h5> 
+                    <p class='card-text'><?php echo $row['product_name'] ?></p>
+                    </div> 
+                    <div class='card-footer'>
+                    <small class='text-muted'>&#9733; &#9733; &#9733; &#9733; &#9734;</small> 
+                </div>
+                </div>
+                </div>
+                <?php
+                    }
+                ?>
+            </a>
+        </div>
         </div>
         </fp>
-
+        
         <!-- ab begin -->
 
 
