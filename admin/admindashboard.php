@@ -21,7 +21,7 @@
                 <h3>PET <span>CARE</span></h3>
             </div>
             <div class="right_area">
-                <a href="admin.php" class="logout_btn">Sign out</a>
+                <a href="adminlogin.php" class="logout_btn">Sign out</a>
             </div>
         </header>
         <!--header area end-->
@@ -29,7 +29,7 @@
         <!--sliderbar start-->
         <div class="sidebar">
             <center>
-                <img src="images/dashadmin.jpg" class="profile_image" alt="profile image">
+                <img src="imgs/dashadmin.jpg" class="profile_image" alt="profile image">
                 <h4>Admin</h4>
             </center>
             <a class="active" href="#"><i class="fa fa-home"></i><span>Dashboard</span></a>

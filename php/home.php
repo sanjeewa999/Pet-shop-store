@@ -37,92 +37,8 @@
 
          <!-- navigation bar begin-->
          <br>
-         <nav>
-            <div class="menu-bar">
-                <ul>
-                    <li class="active"><a href="#"><i class="fa-solid fa-house"></i>HOME</a></li>
-                    <li><a href="#"><i class="fa-solid fa-dog"></i>DOG</a><i class="fa-solid fa-angle-down"></i>
-                        <div class="sub-menu-1">
-                            <ul>
-                                <li class="hover-me"><a href="#"><i class="fa-solid fa-utensils"></i>Dog Food</a><i class="fa-solid fa-angle-right"></i>
-                                    <div class="sub-menu-2">
-                                        <ul>
-                                            <li><a href="#"><i class="fa-solid fa-hotdog"></i>Puppy Food</a></li>
-                                            <li><a href="#"><i class="fa-solid fa-bone"></i>Adult Dog Food</a></li>
-                                            <li><a href="#"><i class="fa-duotone fa-cloud-meatball"></i>Dry Food</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="hover-me"><a href="#"><i class="fa-solid fa-kit-medical"></i>Health & Wellness</a><i class="fa-solid fa-angle-right"></i>
-                                    <div class="sub-menu-2">
-                                        <ul>
-                                            <li><a href="#"><i class="fa-solid fa-pills"></i></i>Nutritional Supplements</a></li>
-                                            <li><a href="#"><i class="fa-sharp fa-solid fa-tablets"></i>
-                                                Dewormer</a></li>
-                                            <li><a href="#"><i class="fa-solid fa-heart-pulse"></i>Others</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li><a href="#"><i class="fa-solid fa-cookie-bite"></i>Snacks & Treats</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="#"><i class="fa-solid fa-cat"></i>CAT</a><i class="fa-solid fa-angle-down"></i>
-                        <div class="sub-menu-1">
-                            <ul>
-                                <li class="hover-me"><a href="#"><i class="fa-solid fa-utensils"></i>Cat Food</a><i class="fa-solid fa-angle-right"></i>
-                                    <div class="sub-menu-2">
-                                        <ul>
-                                            <li><a href="#"><i class="fa-solid fa-hotdog"></i>Kitten Food</a></li>
-                                            <li><a href="#"><i class="fa-solid fa-c"></i>Adult Cat Food</a></li>
-                                            <li><a href="#"><i class="fa-duotone fa-cloud-meatball"></i>Dry Food</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="hover-me"><a href="#"><i class="fa-solid fa-kit-medical"></i>Health & Wellness</a><i class="fa-solid fa-angle-right"></i>
-                                    <div class="sub-menu-2">
-                                        <ul>
-                                            <li><a href="#"><i class="fa-solid fa-pills"></i></i>Nutritional Supplements</a></li>
-                                            <li><a href="#"><i class="fa-sharp fa-solid fa-tablets"></i>
-                                                Dewormer</a></li>
-                                            <li><a href="#"><i class="fa-solid fa-heart-pulse"></i>Others</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li><a href="#"><i class="fa-solid fa-cookie-bite"></i>Snacks & Treats</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="#"><i class="fa-solid fa-paw"></i>ACCESSORIES</a><i class="fa-solid fa-angle-down"></i>
-                        <div class="sub-menu-1">
-                            <ul>
-                                <li><a href="#"><i class="fa-solid fa-bed"></i>Beds & Mats</a></li>
-                                <li><a href="#"><i class="fa-solid fa-bowl-food"></i>Bowls & Feeders</a></li>
-                                <li><a href="#"><i class="fa-solid fa-bicycle"></i>Toys</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="#"><i class="fa-solid fa-shower"></i>GROMMING</a><i class="fa-solid fa-angle-down"></i>
-                        <div class="sub-menu-1">
-                            <ul>
-                                <li><a href="#"><i class="fa-solid fa-bottle-water"></i>Shampoo</a></li>
-                                <li><a href="#"><i class="fa-solid fa-prescription-bottle"></i>Soap</a></li>
-                                <li><a href="#"><i class="fa-solid fa-broom-ball"></i>Talc & Deo</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="#"><i class="fa-solid fa-pills"></i>NUTRITIONAL SUPPLEMENTS</a><i class="fa-solid fa-angle-down"></i>
-                        <div class="sub-menu-1">
-                            <ul>
-                                <li><a href="#"><i class="fa-solid fa-pills"></i>Vitamin Supplements</a></li>
-                                <li><a href="#"><i class="fa-solid fa-pills"></i>Calcium Supplements</a></li>
-                                <li><a href="#"><i class="fa-solid fa-pills"></i>Coat Supplements</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+         <?php include "navbar.php"?>
+         
         <br><br><br> <br><br><br> <br><br><br>
         <!-- slider begin -->
         <slider>
@@ -165,7 +81,7 @@
         <fp>
         <div class="container-fluid">
             <div class="row">
-            <?php $sql="SELECT * FROM product";
+            <?php $sql="SELECT * FROM product LIMIT 10" ;
                $result=mysqli_query($con,$sql);
                
 
@@ -174,9 +90,9 @@
                ?>
                
 
-         <div class='col-lg-3 col-md-4 mb-3 ml-5 mr-5 mt-5'>
+        <div class='col-lg-3 col-md-4 mb-3 ml-5 mr-5 mt-5'>
           <div class='card h-100'> 
-          <a href='#'><img class='card-img-top' src="../imgs/home/<?php echo $row['pro_img'] ?>"></a>
+          <a href='#'><img class='card-img-top' src="../admin/uploads/<?php echo $row['pro_img'] ?>"></a>
          <div class='card-body'>
             <h4 class='card-title'>
 
@@ -206,13 +122,15 @@
         
         <!-- ab begin -->
 
-
+        <?php
+           //include('ab.php');
+        ?>
 
         <!-- footer begin-->
         <footer>
          <div class = "row">
             <div class="col">
-               <img src="../imgs/logo.png" class="logo">
+               <!-- <img src="../imgs/logo.png" class="logo"> -->
                <h4>Pet Care.lk - Pet Shop Sri & Aquarium Lanka</h4>
                <p>Pet Care.lk is your One-stop shop for all things Pet related, selling a range of Top quality, correctly formulated Industry-trusted Pet supplies brands. We only work with official product agents in Sri Lanka and offer online payment and Islandwide delivery</p>
             </div>

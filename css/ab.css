@@ -2,18 +2,18 @@
     padding: 0;
     margin: 0;
 }
-main{
+.ab4{
     width: 100%;
     height: 400px;
     margin: 200px auto;
     overflow: hidden;
     position: relative;
 }
-h1{
+.ab1{
     width: 90%;
     margin: 10px auto;
 }
-span{
+.ab6{
     position: absolute;
     top: 40%;
     font-size: 60px;
@@ -23,11 +23,11 @@ span{
     left: 5%;
     z-index: 1;
 }
-span:nth-of-type(2){
+.ab6:nth-of-type(2){
     left: 98%;
     text-align: right;
 }
-section{
+.ab3{
     padding-top:10px;
     padding-bottom:50px;;
     width: 98%;
@@ -38,10 +38,10 @@ section{
     justify-content: left;
     overflow-x: auto;
 }
-section::-webkit-scrollbar{
+.ab3::-webkit-scrollbar{
     visibility: hidden;
 }
-div{
+.ab2{
     min-width: 330px;
     height: 400px;
     position: relative;
@@ -56,7 +56,7 @@ div{
     transition: 0.5s;
     padding: 15px;
 }
-img{
+.ab5{
 
     margin-top: 30px;
 }

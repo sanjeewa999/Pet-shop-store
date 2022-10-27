@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 10px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+.services{
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+}
+
+.services .heading--text{
+    text-align: center;
+    padding-bottom: 8rem;
+}
+
+.services .heading--text h2{
+    font-size: 4.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+    color: rgb(3, 73, 73);
+}
+
+.services .heading--text p{
+    font-size: 2rem;
+    font-weight: 400;
+    color: rgb(59, 3, 87);
+}
+
+.services .services--content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.services .services--content .gallery{
+    width: 40rem;
+    height: 60rem;
+}
+
+.services .services--content .gallery .gallery__img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4rem 1rem;
+}
+
+.services .services--content .content--info{
+    width: 70rem;
+    margin-top: 4rem;
+}
+
+.services .services--content .content--info h3{
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    line-height: 2;
+    color: rgb(91, 6, 36);
+}
+
+.services--content .content--info .info--content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.services--content .content--info .info--content .content__services{
+    width: 30rem;
+    margin: 2rem;
+    box-shadow: 2px 4px 30px 2px rgba(85, 85, 85, 0.3);
+    border-radius: 8rem 2rem 0 2rem;
+    padding: 2rem;
+}
+
+.services--content .info--content .content__services .content--icon{
+    width: 6rem;
+    height: 6rem;
+    box-shadow: 2px 4px 30px 2px rgba(85, 85, 85, 0.2);
+    background: #9b59b6;
+    padding: 1rem;
+    border-radius: 5rem;
+}
+
+.services--content .info--content .content__services .content--icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.services--content .info--content .content__services .text--section{
+    margin: 1.5rem 0;
+} 
+
+.services--content .info--content .content__services .text--section h4{
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+}
+
+.services--content .info--content .content__services .text--section p{
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin: 1.2rem 0;
+}
+
+@media only screen and (max-width: 1280px){
+
+    .services .heading--text h2{
+        font-size: 4rem;
+    }
+    
+    .services .heading--text p{
+        font-size: 1.8rem;
+    }
+    
+    .services .services--content{
+        margin: 0 2rem;
+    }
+
+    .services .services--content .gallery{
+        width: 35rem;
+    }
+
+    .services .services--content .content--info h3{
+        font-size: 3.2rem;
+    }
+}
+
+@media only screen and (max-width: 1080px){
+
+    .services .heading--text h2{
+        font-size: 3.8rem;
+    }
+    
+    .services .heading--text p{
+        font-size: 1.6rem;
+    }
+    
+    .services .services--content{
+        flex-wrap: wrap;
+    }
+
+    .services .services--content .gallery{
+        width: 35rem;
+        border-radius: 4rem 1rem;
+        overflow: hidden;
+    }
+
+    .services .services--content .gallery .gallery__img{
+        transform: scale(1.4);
+    }
+
+    .services .services--content .content--info h3{
+        font-size: 3rem;
+    }
+
+    .services--content .info--content .content__services .text--section h4{
+        font-size: 1.8rem;
+    }
+
+}
+
+@media only screen and (max-width: 767px){
+
+    .services .heading--text h2{
+        font-size: 3.5rem;
+    }
+    
+    .services .heading--text p{
+        font-size: 1.4rem;
+    }
+
+    .services .services--content .content--info h3{
+        font-size: 2.8rem;
+    }
+
+    .services--content .info--content .content__services .text--section p{
+        font-size: 1.1rem;
+    }
+
+}
+
+@media only screen and (max-width: 580px){
+
+    .services .heading--text h2{
+        font-size: 3rem;
+    }
+    
+    .services .heading--text p{
+        font-size: 1.2rem;
+    }
+
+    .services .services--content .content--info h3{
+        font-size: 2.5rem;
+    }
+
+}
