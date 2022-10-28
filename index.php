@@ -7,6 +7,7 @@
         <title>Pet Shop</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/fp.css">
+        <script type="text/javascript" src="../js/fp1.js"></script>
     </head>
     <body>
         <div class="container">
@@ -48,40 +49,114 @@
                 </div>
             </div>
         </div>
-       
+       <!--
         <fp>
-        <div class="container-fluid">
-            <div class="row">
-            <?php $sql="SELECT * FROM product LIMIT 4";
-               $result=mysqli_query($con,$sql);
-               
-
-               while($row=mysqli_fetch_array($result)){
-  
-               ?>
-               
-
-         <div class='col-lg-3 col-md-4 mb-3 ml-5 mr-5 mt-5'>
-          <div class='card h-100'> 
-          <a href="admin/adminlogin.php"><img class='card-img-top' src="admin/uploads/<?php echo $row['pro_img']?>"></a>
-         <div class='card-body'>
-            <h4 class='card-title'>
-                   <a href='#'></a>
-               <h4><?php echo $row['product_name'] ?></h4> 
-                 <h5>Rs.<?php echo $row['selling_price'] ?></h5> 
-                 <p class='card-text'><?php echo $row['product_name'] ?></p>
-                </div> 
-                <div class='card-footer'>
-                 <small class='text-muted'>&#9733; &#9733; &#9733; &#9733; &#9734;</small> 
-              </div>
-              </div>
-            </div>
-            <?php
-                }
-            ?>
-            </div>
-        </div>
+        <div class="container-fluid"></div>
+            <ul id="autoWidth" class="cs-hidden col-md-12">
+                <li class="item-a col-md-3">
+                    <div class="box">
+                        <div class="slide-img">
+                            <img src="imgs/main/fp1.jpg" alt="1">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <div class="detail-box">
+                            <div class="type">
+                                <a href="#">Rabbed card</a>
+                                <span>Noe Arrival</span>
+                            </div>
+                            <a href="#" class="price">$21</a>
+                        </div>
+                    </div>
+                </li> 
+                <li class="item-b col-md-3">
+                    <div class="box">
+                        <div class="slide-img">
+                            <img src="imgs/main/fp2.jpg" alt="1">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <div class="detail-box">
+                            <div class="type">
+                                <a href="#">Rabbed card</a>
+                                <span>Noe Arrival</span>
+                            </div>
+                            <a href="#" class="price">$22</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-c col-md-3">
+                    <div class="box">
+                        <div class="slide-img">
+                            <img src="imgs/main/fp3.jpg" alt="1">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <div class="detail-box">
+                            <div class="type">
+                                <a href="#">Rabbed card</a>
+                                <span>Noe Arrival</span>
+                            </div>
+                            <a href="#" class="price">$23</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-d col-md-3">
+                    <div class="box">
+                        <div class="slide-img">
+                            <img src="imgs/main/fp4.jpg" alt="1">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <div class="detail-box">
+                            <div class="type">
+                                <a href="#">Rabbed card</a>
+                                <span>Noe Arrival</span>
+                            </div>
+                            <a href="#" class="price">$24</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-e">
+                    <div class="box">
+                        <div class="slide-img">
+                            <img src="imgs/main/fp5.jpg" alt="1">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <div class="detail-box">
+                            <div class="type">
+                                <a href="#">Rabbed card</a>
+                                <span>Noe Arrival</span>
+                            </div>
+                            <a href="#" class="price">$25</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-f">
+                    <div class="box">
+                        <div class="slide-img">
+                            <img src="imgs/main/fp6.jpg" alt="1">
+                            <div class="overlay">
+                                <a href="#" class="buy-btn">Buy Now</a>
+                            </div>
+                        </div>
+                        <div class="detail-box">
+                            <div class="type">
+                                <a href="#">Rabbed card</a>
+                                <span>Noe Arrival</span>
+                            </div>
+                            <a href="#" class="price">$26</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </fp>
-
+-->
     </body>
 </html>
