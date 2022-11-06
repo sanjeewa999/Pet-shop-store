@@ -6,7 +6,7 @@
     <head>
         <title>Pet Shop</title>
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/fp.css">
+        <!-- <link rel="stylesheet" href="css/fp.css"> -->
         <script type="text/javascript" src="../js/fp1.js"></script>
     </head>
     <body>
@@ -18,7 +18,7 @@
                         <li><a href="php/home.php">Home</a></li>
                         <li><a href="php/aboutus.php">About Us</a></li>
                         <li><a href="php/services.php">Our Services</a></li>
-                        <li><a href="admin/adminlogin.php">Log in</a></li>
+                        <li><a href="php/index.php">Log in</a></li>
                     </ul>
                 </nav>
                 <img src="imgs/main/menu.png" class="menu-icon">
