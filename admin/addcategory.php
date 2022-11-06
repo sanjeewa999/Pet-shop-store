@@ -110,7 +110,7 @@
 				$category_name = $_POST['category_name'];
 				$c_description = $_POST['c_description'];
 
-				$sql="INSERT INTO category(category_name,c_description) VALUES ('$category_name','$c_description')";
+				$sql="INSERT INTO category(category_name,c_desc) VALUES ('$category_name','$c_description')";
 
 				$res=mysqli_query($con,$sql);
 

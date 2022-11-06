@@ -56,19 +56,20 @@
                         <table class="table table-bordered" style="margin-left:auto; margin-right:auto; align-content:center; margin-top:100px; ">
                             <thead>
                                 <tr>
-                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">First Name</th>
-                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Last Name</th>
-                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Address</th>
+                                    <!-- <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">User ID</th> -->
+                                    <!-- <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Password</th>-->
+                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Customer Name</th>
+                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Role</th>
                                     <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">E-mail</th>
-                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Password</th>
                                     <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Contact</th>
-                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Country</th>
+                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Date</th>
+                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Active</th>
                                     <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                    $users = getAll("user");
+                                    $users = getAll("users");
 
                                     if(mysqli_num_rows($users) > 0)
                                     {
@@ -76,13 +77,12 @@
                                         {
                                             ?>
                                             <tr>
-                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['fname']; ?></td>
-                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['lname']; ?></td>
-                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['address']; ?></td>
-                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['mail']; ?></td>
-                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['pwd']; ?></td>
-                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['telephone']; ?></td>
-                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['country']; ?></td>
+                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['ufirstname']; ?></td>
+                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['urole']; ?></td>
+                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['uemail']; ?></td>
+                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['utnumber']; ?></td>
+                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['date']; ?></td>
+                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['active']; ?></td>
 
                                                 <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">
                                                 <!-- <a href="#" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:15px 32px; border-radius:15px;">Delete</a> -->

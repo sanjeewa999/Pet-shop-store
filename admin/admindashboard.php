@@ -100,7 +100,7 @@
                                     <div class="box">
 
                                     <?php
-                                        $query = "SELECT mail FROM user ORDER BY mail";
+                                        $query = "SELECT uid FROM users ORDER BY uemail";
                                         $query_run = mysqli_query($con, $query);
 
                                         $row = mysqli_num_rows($query_run);
