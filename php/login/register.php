@@ -1,4 +1,5 @@
 <?php
+require 'db.php';
 /* Registration process, inserts user info into the database 
    and sends account confirmation email message
  */
@@ -29,11 +30,12 @@ else { // Email doesn't already exist in a database, proceed...
 
     // active is 0 by DEFAULT (no need to include it here)
     $sql = "INSERT INTO users (upassword,ufirstname,urole, uemail,utnumber,date) VALUES ('$password','$first_name','Customer','$email','$phone',now())";
-    $result=mysqli_query($connect,$sql);
+    $result= mysqli_query($connect, $sql) or die (mysqli_error($connect)); 
     if (!$result){
         die("Mysqli error".mysqli_error());
     }else{
         $_SESSION['message'] = 'You have successfully registered.You can login now';
     header("location: regsiterokay.php");
     }
+   
 }

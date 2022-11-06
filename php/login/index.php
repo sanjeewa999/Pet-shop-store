@@ -5,11 +5,7 @@ if(isset($_SESSION['email'])){
    $email= $_SESSION['email'];
     $result =mysqli_query($connect,"SELECT * FROM users WHERE uemail='$email';");
     $user = $result->fetch_assoc();
-     if($user['urole']=='Admin'){
-        header("location:../admin/index.php");}
-           if($user['urole']=='Customer'){
-        header("location:../customer/index.php");}
-}else{
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 {
     if (isset($_POST['login'])) { //user logging in
@@ -73,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 							</div>	-->
 						</form>
 					</div>
-					<form action="#" method="post">
+					<form action="register.php" method="post">
 						<div class="sign-up-htm">
 							<div class="group">
 								<label for="user" class="label">First Name</label>
