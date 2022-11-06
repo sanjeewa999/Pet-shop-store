@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="../css/slider.css">
         <link rel="stylesheet" href="../css/searchbar.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
         <link rel="stylesheet" href="../css/fp.css">
         <!-- <link rel="stylesheet" href="../css/ab.css"> -->
         <link rel="styleshhet" href="../bootstrap-5.2.2-dist/css/bootstrap.min.css">
@@ -24,7 +25,7 @@
         <sb>
             <div class="topnav">
                 <label class="topic" style="font-family:arial; font-size:20px; padding-top:20px; margin: top 20px;"> An Exclusive Pet Shopping Experience </label>
-                <a  href="#home">Login or Create Account</a>
+                <a  href="#"><i class="fa fa-sign-out"></i>Logout</a>
                 <a href="#about"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
                 <input type="text" class="search-box"  placeholder="Search..">
             </div>
@@ -50,21 +51,22 @@
                ?>
                
 
-         <div class='col-lg-3 col-md-4 mb-3 ml-5 mr-5 mt-5'>
+               <div class='col-lg-3 col-md-4 mb-3 ml-5 mr-5 mt-5'>
           <div class='card h-100'> 
-          <a href='#'><img class='card-img-top' src="../admin/uploads/<?php echo $row['pro_img'] ?>"></a>
-         <div class='card-body'>
-            <h4 class='card-title'>
-                   <a href='#'></a>
-               <h4><?php echo $row['product_name'] ?></h4> 
-                 <h5>Rs.<?php echo $row['selling_price'] ?></h5> 
-                 <p class='card-text'><?php echo $row['product_name'] ?></p>
+            <a href='#'><img class='card-img-top' src="../admin/uploads/<?php echo $row['pro_img'] ?>"></a>
+                <div class='card-body'>
+                    <h4 class='card-title'>
+
+                    <a href="productdetails.php?id=<?php echo $row['product_id'];?>">
+                    <!-- <img src="<?php echo "../Admin/uploads/".$row['p_image']?>" width="300">  -->
+                    <h4><?php echo $row['product_name'] ?></h4> 
+                    <h5>Rs.<?php echo $row['selling_price'] ?></h5>
                 </div> 
                 <div class='card-footer'>
-                 <small class='text-muted'>&#9733; &#9733; &#9733; &#9733; &#9734;</small> 
-              </div>
-              </div>
+                    <small class='text-muted'>&#9733; &#9733; &#9733; &#9733; &#9734;</small> 
+                </div>
             </div>
+        </div>
             <?php
                 }
             ?>

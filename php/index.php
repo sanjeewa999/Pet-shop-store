@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Petcare.lk Login</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="../css/styles.css">
 		<link rel="stylesheet" href="css/bootstrap.min.js">
 		<script src="js/jquery-3.6.0.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
@@ -76,12 +76,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 					<form action="#" method="post">
 						<div class="sign-up-htm">
 							<div class="group">
-								<label for="pass" class="label">Email Address</label>
-								<input id="pass" type="text" class="input" name="email" required>
-							</div>
-							<div class="group">
 								<label for="user" class="label">First Name</label>
 								<input id="user" type="text" class="input"  name="fname" required>
+							</div>	
+							<div class="group">
+								<label for="user" class="label">Last Name</label>
+								<input id="user" type="text" class="input"  name="fname" required>
+							</div>
+							<div class="group">
+								<label for="pass" class="label">Email Address</label>
+								<input id="pass" type="text" class="input" name="email" required>
 							</div>
 							<div class="group">
 								<label for="pass" class="label">Password</label>

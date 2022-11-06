@@ -28,9 +28,7 @@ session_start();
             <div class="container">
                <div class="block-heading">
                   <h2>Shopping Cart</h2>
-                  <p>Haay.lk provides a reliable, secure shopping cart solution for your order.
-                     Haay.lk allows you to accept credit cards, Amazon Pay, Apple Pay and PayPal payments
-                     by integrating with over 10 payment gateways.
+                  <p>Pet Care.lk is your One-stop shop for all things Pet related, selling a range of Top quality, correctly formulated Industry-trusted Pet supplies brands. We only work with official product agents in Sri Lanka and offer online payment and Islandwide delivery
                   </p>
                </div>
                <div class="content">
