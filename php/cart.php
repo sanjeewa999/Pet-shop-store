@@ -64,7 +64,7 @@ session_start();
 
                                           </div>
                                           <div class="col-md-3 price">
-                                             <td ><?php echo $value['p_price']?><input type="hidden" class="iprice" value="<?php echo $value['p_price']?>"></td>
+                                             <td >Rs.<?php echo $value['p_price']?>.00<input type="hidden" class="iprice" value="<?php echo $value['p_price']?>"></td>
                                           </div>
 
                                              <form action="manage_cart.php" method="POST">
@@ -86,12 +86,12 @@ session_start();
                      </div>
                      <div class="col-md-12 col-lg-4">
                         <div class="summary">
-                           <h3>Summary</h3>
-                           <div class="summary-item"><span class="text">Subtotal</span><span class="price"><?php if($tot>0){echo $tot;} ?></span></div>
-                           <div class="summary-item"><span class="text">Discount</span><span class="price">$0</span></div>
-                           <div class="summary-item"><span class="text">Shipping</span><span class="price">$0</span></div>
-                           <div class="summary-item"><span class="text">Total</span><span class="price"><?php if($tot>0){echo $tot;} ?></span></div>
-                           <button type="button" class="btn btn-primary btn-lg btn-block"><a href="purchase.php"> Checkout</button></a>
+                           <h3>Cart Summary</h3>
+                           <div class="summary-item"><span class="text">Subtotal</span><span class="price">Rs.<?php if($tot>0){echo $tot;} ?>.00</span></div>
+                           
+                           <div class="summary-item"><span class="text">Shipping</span><span class="price">FREE</span></div>
+                           <div class="summary-item"><span class="text">Total</span><span class="price">Rs.<?php if($tot>0){echo $tot;} ?>.00</span></div>
+                           <button type="button" class="btn btn-primary btn-lg btn-block"><a href="checkoutcart.php"> Checkout</button></a>
                         </div>
                      </div>
                   </div>

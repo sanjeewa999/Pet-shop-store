@@ -1,5 +1,7 @@
 <?php
    include ("connection.php");
+   session_start();
+ 
    
    if(isset($_POST['checkout'])){
        $fname=$_POST['fname'];
@@ -11,12 +13,12 @@
        $phone=$_POST['tel'];
        $province=$_POST['province'];
        $postcode=$_POST['postcode'];
-       $pmethod=$POST['payment'];
+       $pmethod=$_POST['payment'];
    
    $sql="INSERT INTO orderdetails(f_name,l_name,country,address,town,email,phone,province,postcode,p_method) VALUES('$fname','$lname','$country','$address','$town','$email','$phone','$province','$postcode','$pmethod')";
    $res=mysqli_query($con,$sql);
    if($res){
-       echo "<script>
+      echo "<script>
            alert('Purchase success');
            window.location.href = 'checkoutcart.php';
        </script>";
@@ -38,7 +40,9 @@
   <title>checkout page </title>
 
 <link rel="stylesheet" href="../css/checkoutcart.css">
+
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
 </head>
 <body>
 
@@ -48,7 +52,7 @@
 <header>
       <h1>Pet shop store Checkout</h1>
 </header>
-    <!--<div class="white-space"></div>-->
+    
     <div class="wrapper">
      
       <div class="row">
@@ -67,7 +71,7 @@
             <label for="country">Country</label>
             <select name="country" id="country" required>
               <option value="">Please select a country</option>
-              <option value="Canada">Sri lanka</option>
+              <option value="Sri lanka">Sri lanka</option>
               
             </select>
            
@@ -80,7 +84,7 @@
             <label for="email2">Email Address</label>
               <input type="text" name="email2" id="email2" required>
               <label for="tel">Phone</label>
-              <input type="text" name="tel" id="tel" required>
+              <input type="text" name="tel" id="tel" required maxlength="10">
 
             <div class="width50 padright">
               <label for="province">Province</label>
@@ -116,40 +120,58 @@
               <h4 class="inline">Product</h4>
               <h4 class="inline alignright">Total</h4>
             </div>
+            <?php
+              $total=0;
+               foreach ($_SESSION['cart'] as $key=>$value) {
+                
+            ?>
             <div>
-              
-              <p class="prod-description inline">pedegree 5Kg<div class="qty inline"><span class="smalltxt">x</span> 1</div></p>
-
+              <p class="prod-description inline"><?php echo $value['p_name'];?><div class="qty inline"><span class="smalltxt">x</span> 1</div><p class="inline alignright">Rs.<?php echo $value['p_price'];?>.00</p></p> 
+              <img class="img-fluid mx-auto d-block image" style="width:150px;height:150px;" src="<?php echo "../Admin/uploads/".$value['p_img']?>"> 
             </div>
-            <div><h5>Cart Subtotal</h5></div>
+            <?php
+                $total=$total+$value['p_price'];
+                 } 
+            ?>
+            
+            <div><h5 class="inline">Order Total</h5><h5 class="inline alignright">Rs.<?php echo $total;?>.00</h5></div>
+            
             <div>
               <h5 class="inline difwidth">Shipping and Handling</h5>
               <p class="inline alignright center">Free Shipping</p>
             </div>
-            <div><h5>Order Total</h5></div>
+            
 
             <div>
               <h3 class="topborder"><span>Payment Method</span></h3>
-              <input type="radio" value="banktransfer" name="payment" checked><p>Direct Bank Transfer</p>
+              <input type="radio" value="banktransfer" name="payment" required><p>Direct Bank Transfer</p>
               <p class="padleft">
                 Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won't be shipped until the funds have cleared in our account.
               </p>
             </div>
 
-            <div><input type="radio" value="cash on delivery" name="payment"><p>Chash On Delivery</p></div>
+            <div><input type="radio" value="cash on delivery" name="payment" required><p>Chash On Delivery</p></div>
             <div>
-              <input type="radio" value="paypal" name="payment"><p>Paypal</p>
+              <input type="radio" value="paypal" name="payment" required><p>Paypal</p>
               <fieldset class="paymenttypes">
                 
                 <img src="../imgs/checkoutcart/paypal.png" alt="Visa, Mastercard, Maestro and Amex Credit Cards" class="cards">
               </fieldset>
               
             </div>
-            <input type="submit" name="checkout" value="Place Order" class="redbutton">
+            <input type="submit"  onclick="alert()" name="checkout" value="Place Order" class="redbutton">
           </div>
         </form>
       </div>
     </div>
+    <?php
 
+?>
 </body>
+<script>
+      /*function alert(){
+         swal("Purchase successfully!", "Your order has been Placed!", "success");
+
+      }*/
+   </script>
 </html>
