@@ -14,8 +14,12 @@
        $province=$_POST['province'];
        $postcode=$_POST['postcode'];
        $pmethod=$_POST['payment'];
+       $product_id=$_POST['product_id'];
+       $product_name=$_POST['product_name'];
+       $total=$_POST['total'];
+
    
-   $sql="INSERT INTO orderdetails(f_name,l_name,country,address,town,email,phone,province,postcode,p_method) VALUES('$fname','$lname','$country','$address','$town','$email','$phone','$province','$postcode','$pmethod')";
+   $sql="INSERT INTO orderdetails(f_name,l_name,country,address,town,email,phone,province,postcode,p_method,product_id,product_name,total) VALUES('$fname','$lname','$country','$address','$town','$email','$phone','$province','$postcode','$pmethod','$product_id','$product_name','$total')";
    $res=mysqli_query($con,$sql);
    if($res){
       echo "<script>
@@ -128,11 +132,15 @@
             <div>
               <p class="prod-description inline"><?php echo $value['p_name'];?><div class="qty inline"><span class="smalltxt">x</span> 1</div><p class="inline alignright">Rs.<?php echo $value['p_price'];?>.00</p></p> 
               <img class="img-fluid mx-auto d-block image" style="width:150px;height:150px;" src="<?php echo "../Admin/uploads/".$value['p_img']?>"> 
+              <input type="hidden" name="product_id" value="<?php echo $value['p_id']?>">
+              <input type="hidden" name="product_name" value="<?php echo $value['p_name']?>">
+              
             </div>
             <?php
                 $total=$total+$value['p_price'];
                  } 
             ?>
+            <input type="hidden" name="total" value="<?php echo $total?>">
             
             <div><h5 class="inline">Order Total</h5><h5 class="inline alignright">Rs.<?php echo $total;?>.00</h5></div>
             

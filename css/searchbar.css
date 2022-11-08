@@ -80,3 +80,16 @@ body {
 
   outline:none;
 }
+
+/*Cart Count Icon*/
+.topnav .badge::after{
+  content:attr(value);
+font-size:12px;
+background: red;
+border-radius:50%;
+padding:3px;
+position:relative;
+left:-8px;
+top:-10px;
+opacity:0.9;
+}
