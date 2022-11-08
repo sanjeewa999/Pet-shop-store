@@ -1,26 +1,27 @@
 
 <?php  require 'db.php';
 session_start();
-if(isset($_SESSION['email'])){
+//$_SESSION['email']="koshika@email.com";
+/*if(isset($_SESSION['email'])){
    $email= $_SESSION['email'];
     $result =mysqli_query($connect,"SELECT * FROM users WHERE uemail='$email';");
-    $user = $result->fetch_assoc();
+    $user = $result->fetch_assoc();*/
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') 
-{
-    if (isset($_POST['login'])) { //user logging in
+			if ($_SERVER['REQUEST_METHOD'] == 'POST') 
+			{
+				if (isset($_POST['login'])) { //user logging in
 
-        require 'login.php';
-        
-    }
-    
-    elseif (isset($_POST['register'])) { //user registering
-        
-        require 'register.php';
-        
-    }
-}
-?>
+					require 'login.php';
+					
+				}
+				
+				elseif (isset($_POST['register'])) { //user registering
+					
+					require 'register.php';
+					
+				}
+			}
+			?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -111,4 +112,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	</body>
 </html>
-<?php } ?>
+<?php //} ?>

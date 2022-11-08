@@ -21,7 +21,7 @@ session_start();
                 <p>
                     <?php 
                     if( isset($_SESSION['message']) AND !empty($_SESSION['message']) ): ?>
-                    <font color="yellow" size='5' ><p><?php echo $_SESSION['message'];    ?></p> 
+                    <font color="yellow" size='5' ><p><?php echo $_SESSION['message3'];    ?></p> 
                         <?php  else:
                         //                    header( "location: index.php" );
                         endif;

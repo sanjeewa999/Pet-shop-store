@@ -25,7 +25,7 @@
         <sb>
             <div class="topnav">
                 <label class="topic" style="font-family:arial; font-size:20px; padding-top:20px; margin: top 20px;"> An Exclusive Pet Shopping Experience </label>
-                <a  href="#"><i class="fa fa-sign-out"></i>Logout</a>
+                <a  href="login/logout.php"><i class="fa fa-sign-out"></i>Logout</a>
                 <a href="#about"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
                 <input type="text" class="search-box"  placeholder="Search..">
             </div>
