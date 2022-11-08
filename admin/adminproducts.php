@@ -61,6 +61,7 @@
                                 <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Quantity</th>
                                 <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Image</th>
                                 <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Delete</th>
+                                <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Edit</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -79,14 +80,24 @@
                                             <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['selling_price']; ?></td>
                                             <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['pro_qty']; ?></td>
                                             <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">
+                    
                                                 <img src="uploads/<?= $item['pro_img']; ?>" width="80px" height="80px" alt="<?= $item['product_name']; ?>">
+                                            </td>
+                                            
+
+                                            <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">
+                                                <!-- <a href="#" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:12px 32px; border-radius:15px;">Delete</a> -->
+                                                <form method="POST" action="deleteproduct.php">
+                                                    <input type="hidden" name="pro_id" value="<?= $item['product_id']; ?>">
+                                                    <button type="submit" name="delete_product_btn" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:12px 32px; border-radius:15px; cursor:pointer;"> <a style="color:white; text-decoration:none;" href="deleteproduct.php?id=<?php echo $item['product_id'];?>">Delete</a> </button>
+                                                </form>
                                             </td>
 
                                             <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">
                                                 <!-- <a href="#" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:12px 32px; border-radius:15px;">Delete</a> -->
-                                                <form method="POST">
+                                                <form method="POST" action="editproduct.php">
                                                     <input type="hidden" name="pro_id" value="<?= $item['product_id']; ?>">
-                                                    <button type="submit" name="delete_product_btn" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:12px 32px; border-radius:15px; cursor:pointer;"> <a style="color:white; text-decoration:none;" href="?id=<?php echo $item['product_id'];?>">Delete</a> </button>
+                                                    <button type="submit" name="" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:12px 32px; border-radius:15px; cursor:pointer;"> <a style="color:white; text-decoration:none;" href="editproduct.php?id=<?php echo $item['product_id'];?>">Edit</a> </button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -106,51 +117,7 @@
             </div>
         </div>
 
-        <!-- today -->
-        <?php
-                if(isset($_GET['id']))
-                {
-                    $products_id = $_GET['id'];
-
-                    $product_query = "SELECT * FROM product WHERE product_id='$products_id'";
-                    $product_query_run = mysqli_query($con, $product_query);
-
-                    $delete_query = "DELETE FROM product WHERE product_id='$products_id'";
-                    $delete_query_run = mysqli_query($con, $delete_query);
-
-                    $product_data = mysqli_fetch_array($product_query_run);
-                    $image = $product_data['pro_img'];
-
-                    if($delete_query_run)
-                    {
-                        if(file_exists("uploads/".$image))
-                        {
-                            unlink("uploads/".$image);
-                        }
-
-                        echo "<script>
-                            swal({
-                                title: 'Deleted',
-								text: 'Data deleted successfully!',
-								icon: 'success',
-								button: 'done',
-                            });
-                   </script>";
-                    }
-                    else
-                    {
-                        echo "<script>
-                        swal({
-                            title: 'Error',
-                            text: 'something went wrong!',
-                            icon: 'warning',
-                            button: 'Ok',
-                        });
-                       </script>";
-                echo "Error:".mysqli_error($con);
-                    }
-                }
-            ?>
+       
 
     </body>
 </html>

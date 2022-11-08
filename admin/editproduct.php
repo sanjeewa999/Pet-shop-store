@@ -90,8 +90,18 @@
 
 
     </style>
-    <body>            
-   
+    <body>
+        <?php
+            
+    if (isset($_GET['id'])) {
+        $product_id=$_GET['id'];
+
+        $query="SELECT * FROM product WHERE product_id='$product_id'";
+        $result=$con->query($query);
+        if ($result->num_rows>0) {
+            while ($data = $result->fetch_assoc()) {
+
+        ?>
         <div class="container">
             <h1 class="head">Add new product</h1>
                 <div class="content">
@@ -113,22 +123,26 @@
                              </select>
                             <br>
                         <label for="">Product Name : </label>
-                            <input type="text" required name="product_name"  placeholder="Enter product name"><br>
+                            <input type="text" required name="product_name" value="<?php echo $data['product_name']?>" placeholder="Enter product name"><br>
                         <label for="">Originalprice : </label>
-                            <input type="text" required name="original_price"  placeholder="Enter original price"><br>
+                            <input type="text" required name="original_price" value="<?php echo $data['original_price']?>" placeholder="Enter original price"><br>
                         <label for="">Selling price : </label>
-                            <input type="text" required name="selling_price"  placeholder="Enter selling price"><br>
+                            <input type="text" required name="selling_price" value="<?php echo $data['selling_price']?>" placeholder="Enter selling price"><br>
                         <label for="">Product Description : </label>
                             <textarea rows="6" required name="p_description"  placeholder="Enter description"></textarea><br><br>
                         <label for="">Upload image : </label>
                             <input type="file" required name="file"><br>
                         <label for="">Quantity : </label>
-                            <input type="number" required name="p_qty"  placeholder="Enter quantity"><br><br> 
-                        <input type="submit" value="Add product" name="add_product_btn">
+                            <input type="number" required name="p_qty" value="<?php echo $data['pro_qty']?>" placeholder="Enter quantity"><br><br> 
+                        <input type="submit" value="Update product" name="add_product_btn">
                 </div> 
             </form>            
         </div>
-       
+        <?php
+                        }
+                    }
+                }
+        ?>
 
         <?php
     
@@ -154,25 +168,24 @@
         if(in_array($imageFileType,$extensions_arr)){
 
             if(move_uploaded_file($_FILES["file"]["tmp_name"],'uploads/'.$filename)){
-                $sql="INSERT INTO `product` (`category_id`, `product_name`, `original_price`, `selling_price`, `pro_desc`, `pro_img`, `pro_qty`)
-                VALUES ('$cat_id', '$product_name', '$original_price', '$selling_price', '$p_description', '$filename', '$p_qty')";
+                $sql="UPDATE product SET category_id='$cat_id', product_name='$product_name',original_price='$original_price',selling_price='$selling_price',pro_desc='$p_description',pro_img='$filename',pro_qty='$p_qty' WHERE product_id='$product_id'";
 
                 if(mysqli_query($con,$sql)){
                    echo "<script>
                             swal({
-                                title: 'Successfuly Added',
-								text: 'Data added successfully!',
+                                title: 'Successfuly Updated',
+								text: 'Updated  successfully!',
 								icon: 'success',
 								button: 'Wow!',
-                            });
+                            });  
                    </script>";
-                   //echo '<script language="javascript">window.location.href="addproduct.php"</script>'; 
+                
                 }
                 else{
                     echo "<script>
 							swal({
 								title: 'Error',
-								text: 'Data didnot add!',
+								text: 'Data didnot updated!',
 								icon: 'warning',
 								button: 'Ok',
 							});
