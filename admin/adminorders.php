@@ -39,7 +39,7 @@
             <a href="adminproducts.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Products</span></a>
             <a href="admincategories.php"><i class="fa fa-list" aria-hidden="true"></i><span>Categories</span></a>
             <a href="admincustomers.php"><i class="fa fa-users" aria-hidden="true"></i><span>Customers</span></a>
-            <a href="#"><i class="fa fa-user"></i></i><span>Admin Profile</span></a>
+            
         </div>
         <!--slider bar end-->
         
@@ -56,18 +56,18 @@
                         <table class="table table-bordered" style="margin-left:auto; margin-right:auto; align-content:center; margin-top:100px; ">
                             <thead>
                                 <tr>
-                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Cart ID</th>
-                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Product ID</th>
-                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Product name</th>
-                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Unit price</th>
-                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Quantity</th>
-                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Total</th>
+                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Customer Name</th>
+                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Address</th>
+                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Email</th>
+                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Contact </th>
+                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Payment Method</th>
+                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Update</th>
                                     <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Delete</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                    $orders = getAll("orders");
+                                    $orders = getAll("orderdetails");
 
                                     if(mysqli_num_rows($orders) > 0)
                                     {
@@ -75,17 +75,25 @@
                                         {
                                             ?>
                                             <tr>
-                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['cart_id']; ?></td>
-                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['product_id']; ?></td>
-                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['p_name']; ?></td>
-                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['unit_price']; ?></td>
-                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['qty']; ?></td>
+                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['f_name']; ?></td>
+                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['address']; ?></td>
+                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['email']; ?></td>
+                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['phone']; ?></td>
+                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['p_method']; ?></td>
 
                                                 <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">
                                                 <!-- <a href="#" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:15px 32px; border-radius:15px;">Delete</a> -->
                                                 <form method="POST">
-                                                    <input type="hidden" name="cate_id" value="<?= $item['cart_id']; ?>">
-                                                    <button type="submit" name="delete_order_btn" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:12px 32px; border-radius:15px; cursor:pointer;"> <a href="?id=<?php echo $item['cart_id'];?>" style="color:white; text-decoration:none;">Delete</a> </button>
+                                                    <input type="hidden" name="cate_id" value="<?= $item['order_id']; ?>">
+                                                    <button type="submit" name="update_order_btn" style="background-color:rgb(17, 255, 100); color:white; text-decoration:none; padding:12px 32px; border-radius:15px; cursor:pointer;"> <a href="updateorder.php">Update</a> </button>
+                                                </form>
+                                                </td>
+
+                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">
+                                                <!-- <a href="#" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:15px 32px; border-radius:15px;">Delete</a> -->
+                                                <form method="POST">
+                                                    <input type="hidden" name="cate_id" value="<?= $item['order_id']; ?>">
+                                                    <button type="submit" name="delete_order_btn" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:12px 32px; border-radius:15px; cursor:pointer;"> <a href="?id=<?php echo $item['order_id'];?>" style="color:white; text-decoration:none;">Delete</a> </button>
                                                 </form>
                                                 </td>
                                             </tr>

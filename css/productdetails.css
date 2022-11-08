@@ -1,0 +1,213 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+body{
+	font-family:sans-serif;
+}
+.navbar{
+	display:flex;
+	align-items:center;
+	padding:20px;
+}
+
+nav{
+	flex:1;
+	text-align:right;	
+}
+
+nav ul{
+	display:inline-blocks;
+	list-style:none;
+}
+
+nav ul li {
+	display:inline-blocks;
+	margin-right:20px;
+	float:right;
+}
+
+a{
+	text-decoration:none;
+	color:#555555;
+}
+
+p{
+	color:#555555;
+}
+
+.container{
+	max-width:1300px;
+	margin:auto;
+	padding-left:25px;
+	padding-right:25px;
+}
+
+.row{
+	display:flex;
+	align-items:center;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+
+.col-2{
+	flex-basis:50%;
+	min-height:300px;
+}
+
+.col-2 img{
+	max-width:100%;
+	padding:50px 0;
+}
+
+.col-2 h1{
+	front-size:50px;
+	line-height:60px;
+	margin:25px 0;
+}
+/*slider*/
+.slider{
+	flex: 50%;
+	width: 30%;
+	height: 20%;
+	align-items: center;
+	justify-content: center;
+	margin-left: 100px;
+	margin-bottom: 100px;
+}
+
+.swiper{
+
+	width:100%;
+	height: 400px;
+}
+
+
+.swiper-slide img{
+
+width:100%;
+height: 400px;
+
+
+
+}
+.swiper .swiper-button-prev, .swiper .swiper-button-next{
+
+	color:black;
+
+}
+.swiper .swiper-pagination-bullet-active{
+
+	background: black;
+}
+
+
+
+.btn{
+	display:inline-blocks;
+	background:#faadbf;
+	color:white;
+	padding:8px 30px;
+	margin:30px 0;
+	border-radius:30px;
+}
+
+
+.btn:hover{
+	background:orangered;
+}
+
+.header{
+	background:radial-gradient(#ffffff,#faadbd);
+}
+
+.header{
+	margin-top:0px;
+}
+
+.categories{
+	margin:70px 0;
+}
+
+.col-3 {
+	max-width:1080px;
+	margin:auto;
+	padding-left:25px;
+	padding-right:25px;
+}
+
+.small-container{
+	max-width:1080px;
+	margin:auto;
+	padding-left:25px;
+	padding-right:25px;
+}
+
+.col4{
+	align-items:center;
+	flex-basis:20%;
+	padding:10px;
+	min-width:200px;
+	margin-bottom:50px;
+}
+
+.col4 img{
+	width: 200px;
+}
+---------------------------------------------------------------------------------------------------------procucts-----------------------------------------------------------------------------------------------------------------
+
+p {
+	margin-left:50px;
+}
+
+h4{
+	margin-left:50px;
+}
+
+.box1{
+	display:flex;
+}
+
+.box2{
+	display:flex;
+}
+
+.product_column1{
+	flex:25%;
+}
+
+.product_column2{
+	flex:25%;
+}
+
+.product_column3{
+	flex:25%;
+}
+
+.product_column4{
+	flex:25%;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+button.active{
+	background:#585858;
+	color:white;
+}
+
+.purchase{
+	margin-top:5rem;
+}
+
+.purchase button{
+	width:100%;
+	padding:1rem 0rem;
+	background:#f54642;
+	border:none;
+	color:white;
+	cursor:pointer;
+	border-radius:30px;
+	font-weight:bolder;
+}

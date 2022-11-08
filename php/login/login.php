@@ -26,7 +26,7 @@ else { // User exists
         header("location:../home.php");}
     }
     else {
-        $_SESSION['message'] = "You have entered wrong password, try again!";
+        $_SESSION['message3'] = "You have entered wrong password, try again!";
         header("location: error.php");
     }
 }

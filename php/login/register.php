@@ -34,7 +34,7 @@ else { // Email doesn't already exist in a database, proceed...
     if (!$result){
         die("Mysqli error".mysqli_error());
     }else{
-        $_SESSION['message'] = 'You have successfully registered.You can login now';
+        $_SESSION['message2'] = 'You have successfully registered.You can login now';
     header("location: regsiterokay.php");
     }
    

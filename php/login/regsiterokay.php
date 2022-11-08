@@ -15,12 +15,12 @@ session_start();
 
         <div class="login-wrap">
             <div class="login-html">
-                <font color="Green" size='7' ><center>Congratulations!</center><br>
+                <font color="Green" size='7' ><center>Registration Successfull!</center><br>
                 </font>
                 <p>
                     <?php 
                     if( isset($_SESSION['message']) AND !empty($_SESSION['message']) ): ?>
-                    <font color="yellow" size='5' ><p><?php echo $_SESSION['message'];    ?></p> 
+                    <font color="yellow" size='5' ><p><?php //echo $_SESSION['message2'];    ?></p> 
                         <?php  else:
                         //                    header( "location: index.php" );
                         endif;

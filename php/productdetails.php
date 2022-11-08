@@ -8,28 +8,24 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="../style.css">
-	<link rel="stylesheet" href="style.css">
-      <link rel="stylesheet" href="footer.css">
-
-	  <link rel="stylesheet" href="../css/footer.css">
-        <link rel="stylesheet" href="../css/navstyle.css">
-        <link rel="stylesheet" href="../css/slider.css">
-        <link rel="stylesheet" href="../css/searchbar.css">
+	<link rel="stylesheet" href="../productdetails.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
         <link rel="stylesheet" href="../css/fp.css">
         <!-- <link rel="stylesheet" href="../css/ab.css"> -->
         <link rel="styleshhet" href="../bootstrap-5.2.2-dist/css/bootstrap.min.css">
         <script src="text/javascript" src="../bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="../js/fp1.js"></script>
-        <script type="text/javascript" src="../js/ab.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/619bc20a51.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 
+
+
+	<a href="home.php">
+
 	<a href="../Main/home.php">
+
 		<div class="sizes1">
 			<button>Back</button>
 		</div>
@@ -114,7 +110,7 @@ if(isset($_POST['addcart'])){
 		</form>
 	</div>
 
-	<a href="../Main/home.php">
+	<a href="home.php">
 		<div class="sizes1">
 			<button>Home</button>
 		</div>

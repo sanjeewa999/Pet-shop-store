@@ -37,7 +37,7 @@
             <a href="adminproducts.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Products</span></a>
             <a href="admincategories.php"><i class="fa fa-list" aria-hidden="true"></i><span>Categories</span></a>
             <a href="admincustomers.php"><i class="fa fa-users" aria-hidden="true"></i><span>Customers</span></a>
-            <a href="#"><i class="fa fa-user"></i></i><span>Admin Profile</span></a>
+            
         </div>
         <!--slider bar end-->
         <div class="container">
@@ -47,7 +47,7 @@
                     <div class="card">
                         <div class="box">
                             <?php
-                                    $query = "SELECT cart_id FROM orders ORDER BY cart_id";
+                                    $query = "SELECT order_id FROM orderdetails ORDER BY order_id";
                                     $query_run = mysqli_query($con, $query);
 
                                     $row = mysqli_num_rows($query_run);
