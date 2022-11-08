@@ -1,8 +1,8 @@
 <?php
 
     include('connection.php');
-    //session_start();
-
+    session_start();
+    $product_count=count($_SESSION['cart']);
 ?>
 
 <html>
@@ -29,7 +29,7 @@
             <div class="topnav">
                 <label class="topic" style="font-family:arial; font-size:20px; padding-top:20px; margin: top 20px;"> An Exclusive Pet Shopping Experience </label>
                 <a  href="#"><i class="fa fa-sign-out"></i>Logout</a>
-                <a href="cart.php"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
+                <a href="cart.php"><i class="fa badge" style="font-size:24px" value=<?php echo $product_count;?>>&#xf07a;</i></i>Cart</a>
                 <input type="text" class="search-box"  placeholder="Search..">
             </div>
         </sb>
