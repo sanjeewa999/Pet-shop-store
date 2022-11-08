@@ -29,7 +29,6 @@
 <body>
 
 
-
 	<a href="../Main/home.php">
 		<div class="sizes1">
 			<button>Back</button>
@@ -39,6 +38,49 @@
 	<div class="container">
 		<form action="manage_cart.php" method="POST">
 		<?php
+
+
+if(isset($_POST['addcart'])){
+	if(isset($_SESSION['uid'])){
+		
+	// echo "Form submitted";
+	//getting the data
+	//$uid=$_SESSION['uid'];
+	$pid=$_GET['p_id'];
+	$p_name=$_GET['p_name'];
+	$up=$_GET['unit_price'];
+	$qty=$_GET['qty'];
+	$t_price=$_GET['total_product_price'];
+	$date=$_SESSION['time'];
+	
+
+	   $sql="INSERT INTO cart(p_id,p_name,unit_price,qty,total_product_price,time) VALUES('$pid','$p_name','$up','$qty','$t_price','$date')";
+		 $res=mysqli_query($conn,$sql);
+		 echo mysqli_error($conn);
+
+			 if($res){
+				 echo  "<script type=\"text/javascript\">
+				 Swal.fire('Added!!',
+					   'Product is added to the cart',
+					   'success'
+				 )
+			   </script>";
+			   header("location:cart.php?quantity=".$_POST['quantity']);
+			 }
+			 else{
+			   echo "<script>
+				 swal({
+				 title: 'Error',
+				 text: 'product didnot add!',
+				 icon: 'warning',
+				 button: 'Ok',
+				 });
+			   </script>";
+			 }
+
+			}}
+
+
 			if(isset($_GET['id'])){
 				$product_id=$_GET['id'];
 				$sql="SELECT * FROM product WHERE product_id='$product_id'";
