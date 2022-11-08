@@ -61,7 +61,6 @@
                                     <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Email</th>
                                     <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Contact </th>
                                     <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Payment Method</th>
-                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Update</th>
                                     <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Delete</th>
                                 </tr>
                             </thead>
@@ -81,13 +80,7 @@
                                                 <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['phone']; ?></td>
                                                 <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;"> <?= $item['p_method']; ?></td>
 
-                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">
-                                                <!-- <a href="#" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:15px 32px; border-radius:15px;">Delete</a> -->
-                                                <form method="POST">
-                                                    <input type="hidden" name="cate_id" value="<?= $item['order_id']; ?>">
-                                                    <button type="submit" name="update_order_btn" style="background-color:rgb(17, 255, 100); color:white; text-decoration:none; padding:12px 32px; border-radius:15px; cursor:pointer;"> <a href="updateorder.php">Update</a> </button>
-                                                </form>
-                                                </td>
+                                                
 
                                                 <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">
                                                 <!-- <a href="#" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:15px 32px; border-radius:15px;">Delete</a> -->

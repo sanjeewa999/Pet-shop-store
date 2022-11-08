@@ -59,6 +59,7 @@
                                     <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Category Name</th>
                                     <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Description</th>
                                     <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Delete</th>
+                                    <th style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">Edit</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -84,6 +85,15 @@
                                                     <button type="submit" name="delete_category_btn" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:12px 32px; border-radius:15px; cursor:pointer;"> <a href="?id=<?php echo $item['category_id'];?>" style="color:white; text-decoration:none;">Delete</a> </button>
                                                 </form>
                                                 </td>
+
+                                                <td style="padding-top:10px; padding-bottom:10px; padding-left:15px; padding:20px;">
+                                                <!-- <a href="#" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:12px 32px; border-radius:15px;">Delete</a> -->
+                                                <form method="POST" action="editproduct.php">
+                                                    <input type="hidden" name="cat_id" value="<?= $item['category_id']; ?>">
+                                                    <button type="submit" name="" style="background-color:rgb(13, 13, 255); color:white; text-decoration:none; padding:12px 32px; border-radius:15px; cursor:pointer;"> <a style="color:white; text-decoration:none;" href="editcategory.php?id=<?php echo $item['category_id'];?>">Edit</a> </button>
+                                                </form>
+                                            </td>
+
                                             </tr>
                                         <?php
                                         }

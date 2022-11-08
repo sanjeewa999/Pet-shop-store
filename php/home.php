@@ -2,8 +2,8 @@
 
     include('connection.php');
     session_start();
-
-    $product_count=count($_SESSION['cart']);
+    
+    
 ?>
 
 <html>
@@ -34,7 +34,13 @@
                 <a href="cart.php"><i class="fa-solid fa-cart-shopping"></i>Cart</a>
 
                 <a  href="#"><i class="fa fa-sign-out"></i>Logout</a>
-                <a href="cart.php"><i class="fa badge" style="font-size:24px" value=<?php echo $product_count;?>>&#xf07a;</i></i>Cart</a>
+                <a href="cart.php"><i class="fa badge" style="font-size:24px" value=<?php 
+                if(!empty($_SESSION['cart'])){
+                    $product_count=count($_SESSION['cart']);
+                
+                echo $product_count;
+                }
+                ?>>&#xf07a;</i></i>Cart</a>
 
                 <input type="text" class="search-box"  placeholder="Search..">
             </div>

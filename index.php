@@ -15,7 +15,7 @@
                 <!-- <img src="imgs/logo.png" class="logo"> -->
                 <nav>
                     <ul>
-                        <li><a href="php/home.php">Home</a></li>
+                        <li><a href="php/login/index.php">Home</a></li>
                         <li><a href="php/aboutus.php">About Us</a></li>
                         <li><a href="php/services.php">Our Services</a></li>
                         <li><a href="php/login/index.php">Log in</a></li>
@@ -27,7 +27,7 @@
                 <div class="col">
                     <h1>Pet Care</h1>
                     <p>MyPets.lk is your One-stop shop for all things Pet related, selling a range of Top quality, correctly formulated Industry-trusted Pet supplies brands. We only work with official product agents in Sri Lanka and offer online payment and Islandwide delivery</p>
-                    <button type="button"><a href="php/login/index.php">SHOP NOW</a></button>
+                    <button type="button"><a href="php/login/index.php">Explore More</a></button>
                 </div>
                 <div class="col">
                     <div class="card card1">

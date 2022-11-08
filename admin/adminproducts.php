@@ -97,7 +97,7 @@
                                                 <!-- <a href="#" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:12px 32px; border-radius:15px;">Delete</a> -->
                                                 <form method="POST" action="editproduct.php">
                                                     <input type="hidden" name="pro_id" value="<?= $item['product_id']; ?>">
-                                                    <button type="submit" name="" style="background-color:rgb(247, 8, 84); color:white; text-decoration:none; padding:12px 32px; border-radius:15px; cursor:pointer;"> <a style="color:white; text-decoration:none;" href="editproduct.php?id=<?php echo $item['product_id'];?>">Edit</a> </button>
+                                                    <button type="submit" name="" style="background-color:rgb(13, 13, 255); color:white; text-decoration:none; padding:12px 32px; border-radius:15px; cursor:pointer;"> <a style="color:white; text-decoration:none;" href="editproduct.php?id=<?php echo $item['product_id'];?>">Edit</a> </button>
                                                 </form>
                                             </td>
                                         </tr>
